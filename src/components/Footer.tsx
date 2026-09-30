@@ -23,6 +23,7 @@ export function Footer() {
                     className="text-sm uppercase tracking-wider"
                   >
                     Facebook
+                    <span className="sr-only"> Elvas Cultura (abre numa nova janela)</span>
                   </a>
                 </li>
               ) : null}
@@ -35,6 +36,7 @@ export function Footer() {
                     className="text-sm uppercase tracking-wider"
                   >
                     Instagram
+                    <span className="sr-only"> Elvas Cultura (abre numa nova janela)</span>
                   </a>
                 </li>
               ) : null}
