@@ -13,7 +13,7 @@
   --elvas-header: #0a0a0a;
   --elvas-header-fg: #ffffff;
   --elvas-header-muted: #b8b8b8;
-  --elvas-accent: #2f6f73;
+  --elvas-accent: #1e5a5e;
   --elvas-accent-soft: #e8f3f3;
 }
 
@@ -34,6 +34,12 @@
 
 html {
   scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }
 
 body {
