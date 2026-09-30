@@ -6,7 +6,7 @@ Agenda cultural do concelho de Elvas. Site público em português de Portugal (`
 
 - **Fase 0:** concluída — fundação Next.js, tokens, layout, documentação.
 - **Fase 1:** concluída — schema `evento`, Studio em `/studio`, cliente GROQ em `src/sanity/lib`.
-- **Fase 2 do produto:** pendente — Home completa, Sobre, Agenda, detalhe do evento, SEO.
+- **Fase 2 do produto:** concluída — Home, Sobre, Agenda com filtros na URL, detalhe SEO (JSON-LD e Open Graph), sitemap e robots.
 - **Fase 3:** pendente — Fala connosco, privacidade, Resend.
 - **Fase 4:** pendente — stub de templates sociais, README final, acessibilidade.
 - **Fase 2 futura (redes):** não implementar agora — gerar imagem de post a partir de um evento.
