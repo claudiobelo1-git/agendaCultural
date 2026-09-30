@@ -4,8 +4,8 @@ Agenda cultural do concelho de Elvas. Site público em português de Portugal (`
 
 ## Estado atual
 
-- **Fase 0 (em curso / concluída nesta entrega):** fundação Next.js (App Router, TypeScript, Tailwind v4), tokens de design, layout (cabeçalho, rodapé), documentação e `.env.example`.
-- **Fase 1:** pendente — Sanity CMS, documento `evento`, Studio em `/studio`.
+- **Fase 0:** concluída — fundação Next.js, tokens, layout, documentação.
+- **Fase 1:** concluída — schema `evento`, Studio em `/studio`, cliente GROQ em `src/sanity/lib`.
 - **Fase 2 do produto:** pendente — Home completa, Sobre, Agenda, detalhe do evento, SEO.
 - **Fase 3:** pendente — Fala connosco, privacidade, Resend.
 - **Fase 4:** pendente — stub de templates sociais, README final, acessibilidade.
@@ -21,9 +21,18 @@ Agenda cultural do concelho de Elvas. Site público em português de Portugal (`
 - Paleta: fundo branco, tinta quase preta, cabeçalho preto, acento teal `#2f6f73`.
 - Textos legais e Sobre: provisórios, claramente marcados para edição.
 
-## Estrutura (Fase 0)
+## Estrutura
 
-- `src/app` — App Router
+- `src/app/(site)` — páginas públicas (cabeçalho e rodapé)
+- `src/app/studio` — Studio Sanity embebido
+- `src/sanity` — env, schema, cliente, queries
 - `src/components` — Header, Footer, Logo
 - `src/lib/site.ts` — nome, slogan, descrição, URL
 - `src/lib/datetime.ts` — formatação `pt-PT` / `Europe/Lisbon`
+- `src/lib/categories.ts` — categorias da agenda
+
+## Queries de eventos
+
+- Publicados (`publicado == true`).
+- Agenda por omissão: `coalesce(dataFim, dataInicio) >= agora`.
+- Home: eventos com `destaque`; se não houver, os próximos.
