@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+/*
+  Tokens de design — único sítio para ajustar cores e tipografia.
+  Tailwind v4 lê estas variáveis via @theme (não há tailwind.config.ts).
+*/
+:root {
+  --elvas-bg: #ffffff;
+  --elvas-bg-subtle: #f7f7f5;
+  --elvas-ink: #111111;
+  --elvas-ink-muted: #5c5c5c;
+  --elvas-line: #e6e6e4;
+  --elvas-header: #0a0a0a;
+  --elvas-header-fg: #ffffff;
+  --elvas-header-muted: #b8b8b8;
+  --elvas-accent: #1e5a5e;
+  --elvas-accent-soft: #e8f3f3;
+}
+
+@theme inline {
+  --color-bg: var(--elvas-bg);
+  --color-bg-subtle: var(--elvas-bg-subtle);
+  --color-ink: var(--elvas-ink);
+  --color-ink-muted: var(--elvas-ink-muted);
+  --color-line: var(--elvas-line);
+  --color-header: var(--elvas-header);
+  --color-header-fg: var(--elvas-header-fg);
+  --color-header-muted: var(--elvas-header-muted);
+  --color-accent: var(--elvas-accent);
+  --color-accent-soft: var(--elvas-accent-soft);
+  --font-sans: var(--font-source-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-cormorant), ui-serif, Georgia, serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  background: var(--elvas-bg);
+  color: var(--elvas-ink);
+  font-family: var(--font-sans);
+}
+
+:focus-visible {
+  outline: 2px solid var(--elvas-accent);
+  outline-offset: 3px;
+}
+
+::selection {
+  background: var(--elvas-accent-soft);
+  color: var(--elvas-ink);
+}
