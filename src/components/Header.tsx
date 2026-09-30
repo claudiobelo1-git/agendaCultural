@@ -10,6 +10,12 @@ const nav = [
 export function Header() {
   return (
     <header className="bg-header text-header-fg">
+      <a
+        href="#conteudo"
+        className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:bg-bg focus:px-3 focus:py-2 focus:text-ink"
+      >
+        Saltar para o conteúdo
+      </a>
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-6 px-4 py-5 sm:px-6">
         <Link href="/" className="rounded-sm focus-visible:outline-none">
           <Logo />
